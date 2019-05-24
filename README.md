@@ -1,4 +1,4 @@
-﻿# Data Warehouse SQL Queries Optimizer
+# Data Warehouse SQL Queries Optimizer
 > A data warehouse is a structure which contains a large volume of data. Accessing this data is insured by queries which are generally very expensive in response time. The created optimizer is a website with a remote database connection which allows to reduce the cost of these queries, using a technique : materialized views.
 
 ## General info
@@ -7,8 +7,8 @@ Project released in **Mai 2018** as a graduation project for the License degree,
 ## ScreenShots
 <p align="center">
 	<p align="center">
-		<img src="examples/dataBaseLogin.png" alt="Database login">
-		<img src="examples/queriesInsertion.png" alt="SQL queries insertion">
+		<img width="45%" height="350" src="examples/dataBaseLogin.png" alt="Database login">
+		<img width="45%" height="350" src="examples/queriesInsertion.png" alt="SQL queries insertion">
 	</p>
 	<p align="center">
 		<img src="examples/explainPlanView.png" alt="Explain-plan view">
@@ -23,13 +23,13 @@ Project released in **Mai 2018** as a graduation project for the License degree,
 .
 ├── examples			<- Contains a star schema database creation script and illustrations
 │
-├── src					<- Contains source-code of the project (organized following the MVC architecture)
-│	├── Model			<- Defines the skeleton of the project (Classes and common functions)
-│	│	├── Plugins		<- External libraries and used tools
-│	│	└── Styles		<- CSS styles used in HTML and PHP generated pages
+├── src				<- Contains source-code of the project (organized following the MVC architecture)
+│	├── Model		<- Defines the skeleton of the project (Classes and common functions)
+│	│	├── Plugins	<- External libraries and used tools
+│	│	└── Styles	<- CSS styles used in HTML and PHP generated pages
 │	│
-│	├── View			<- Contains the visible part (forms, diagrams and optimization results)
-│	├── Control			<- Contains algorithms used to optimize SQL queries (the most important part)
+│	├── View		<- Contains the visible part (forms, diagrams and optimization results)
+│	├── Control		<- Contains algorithms used to optimize SQL queries (the most important part)
 │	└── index.php		<- The first page (login, connection to the database) of the optimization tool
 │
 ├── licenseThesis.pdf	<- Final license thesis (in FRENCH)
