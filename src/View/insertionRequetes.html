@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Insertion des requêtes</title>
+	<meta charset="utf-8" />
+	<link rel="icon" href="../Model/Data_Warehouse.ico">
+
+	<script src="../Model/Plugins/CodeMirror/codemirror.js"></script>
+	<link rel="stylesheet" href="../Model/Plugins/CodeMirror/codemirror.css">
+	<link rel="stylesheet" href="../Model/Plugins/CodeMirror/blackboard.css">
+	<script src="../Model/Plugins/CodeMirror/sql.js"></script>
+
+	<link rel="stylesheet" href="../Model/Styles/insertionRequetes.html.css">
+</head>
+
+<body>
+	<h1>Insertion des requêtes SQL</h1>
+
+	<textarea name="editeur" id="editeur"></textarea>
+
+	<form onsubmit="return ajouter_post_envoie(this);" method="post" action='affichageRequetes.php'>
+		<textarea name="post_envoie" id="post_envoie" hidden></textarea>
+		<input id="valider" type='submit' value='Valider' onmouseout="supp_Alerte()" onmouseover="changer_couleur()"/>
+	</form>
+
+	<script>
+		var editeur = CodeMirror.fromTextArea(document.getElementById('editeur'), {
+			mode: "text/x-mysql",
+			theme: "blackboard",
+			lineNumbers: true,
+		});
+
+		function ajouter_post_envoie(elem) {
+			if(! editeur.getValue().replace(/\s/g, '').length) {
+				document.getElementById("valider").style.animation = "shake 0.9s cubic-bezier(.36,.07,.19,.97) both";
+				document.getElementById("valider").style.background = "#D32F2F";
+				document.getElementById("valider").style.color = "#1A237E";
+				return false;
+			}
+			else {
+				document.getElementById("post_envoie").value = editeur.getValue();
+				return true;
+			}
+		}
+
+		function supp_Alerte() {
+			document.getElementById("valider").style.animation = "";
+			document.getElementById("valider").style.background = "transparent";
+			document.getElementById("valider").style.color = "#1A237E";
+		}
+
+		function changer_couleur() {
+			document.getElementById("valider").style.background = "#1A237E";
+			document.getElementById("valider").style.color = "#ffffff";
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+* {
+	margin: 0;
+	background-color: #C5CAE9;
+}
+
+header *{
+	color:  #ffffff;
+	background-color: #1A237E;
+	text-align: center;
+	padding: 1.5%;
+	margin-bottom: 0.5%;
+	box-shadow: 0px 0px 10px 0px #000;
+}
+
+#interfaceConnexion {
+	text-align: center;
+}
+
+form input{
+	transition: all 0.2s ease-out;
+	font-size: 21pt;
+	padding: 0.9%;
+	border-radius: 3px;
+	border: 1px solid grey;
+	margin: 0.3% 0% 0.3% 0%;
+}
+
+form input:focus{
+	outline: none;
+	border: 2px solid #1A237E;
+	border-radius: 3px;
+}
+
+#deuxPoints {
+	font-size: 25pt;
+	margin: 0% 0.2% 0% 0.2%;
+}
+
+#valider {
+	transition: all 0.3s ease-out;
+	margin-top: 3%;
+	padding-left: 2%;
+	padding-right: 2%;
+	border-radius: 1px;
+	border: 2px solid #1A237E;
+	color: #1A237E;
+	background-color: transparent;
+}
+
+#valider:hover {
+	color: white;
+	background-color: #1A237E;
+	cursor: pointer;
+}
+
+#erreurConn {
+	color: red;
+	font-size: 21pt;
+	text-align: center;
+	box-sizing: border-box;
+	padding-top: 1.5%;
+	line-height: 50px;
+}
